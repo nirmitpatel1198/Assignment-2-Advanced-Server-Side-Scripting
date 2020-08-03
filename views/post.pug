@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= post.title
+  h5 Written by #{author} 
+  hr
+  p= post.body
+  if user
+    if user.id == post.author
+      a.btn.btn-info(href='/posts/edit/'+post._id) Edit 
+      |
+      |
+      a.btn.btn-danger.delete-post(href='#',data-id=post._id) Delete
+  

@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  center
+    h1 Login
+    hr
+    form(method='POST', action='/users/login')
+      #form-group
+        label Username:
+        input.input-group(name='username',type='text', required)
+      #form-group
+        label Password:
+        input.input-group(name='password',type='password', required)
+      br
+      input.btn.btn-default(type='submit',value='Submit')

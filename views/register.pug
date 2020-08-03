@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  center
+    h1 Register
+    form(method='POST', action='/users/register')
+      #form-group
+        label Name:
+        input.input-group(name='name', type='text', required)
+      br
+      #form-group
+        label Email:
+        input.input-group(name='email', type='email', required)
+      br
+      #form-group
+        label Username:
+        input.input-group(name='username',type='text', required)
+      br
+      #form-group
+        label Password:
+        input.input-group(name='password',type='password', required)
+      br
+      //- #form-group
+      //-   label Confirm:
+      //-   input.input-group(name='password2',type='password', required)
+      //- br
+      input.btn.btn-default(type='submit',value='Submit')
